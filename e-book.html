@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="FICT CV Management">
+        <meta name="author" content="FICT CV Management"> 
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="shortcut icon" href="img/logo_fict.svg" />
+        
+        <title>FICT GROUP</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/app.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css"/>   
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>   
+        <link href="css/select2.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav id="sidebar" class="sidebar js-sidebar">
+                <div class="sidebar-content js-simplebar">
+                    
+					<img src="img/logo_fict_white.svg" class="logo" alt="FICT CV Management">
+					<br>
+                    <ul class="sidebar-nav"> 
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="index.html"> 
+								<i class="fal fa-file-alt"></i>
+								<span class="align-middle">Project</span>
+                            </a>
+                        </li> 
+                        <li class="sidebar-item active">
+                            <a class="sidebar-link" href="e-book.html"> 
+								<i class="fal fa-book"></i>
+								<span class="align-middle">E-Book</span>
+                            </a>
+                        </li> 
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="external.html">  
+								<i class="fal fa-users"></i>
+								<span class="align-middle">OUR CLIENT</span>
+                            </a>
+                        </li>  
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="external.html">  
+								<i class="fal fa-user"></i> 
+								<span class="align-middle">ACTIVITY CSR</span>
+                            </a>
+                        </li>  
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="external.html">  
+								<i class="fab fa-leanpub"></i>
+								<span class="align-middle">KNOWLEDGE</span>
+                            </a>
+                        </li>  
+                        <li class="sidebar-item">
+                            <a class="sidebar-link" href="external.html">  
+								<i class="far fa-address-card"></i>
+								<span class="align-middle">ABOUT US</span>
+                            </a>
+                        </li>   
+                    </ul>  
+                </div>
+            </nav>
+            <div class="main">
+                <nav class="navbar navbar-expand navbar-light navbar-bg">
+                    <a class="sidebar-toggle js-sidebar-toggle">
+                    <i class="hamburger align-self-center"></i>
+                    </a> 
+                    <div class="navbar-collapse collapse">
+                        <ul class="navbar-nav navbar-align">
+							<li class="nav-item nav-date">วันที่ 10 มิถุนายน 2567</li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-icon dropdown-toggle" href="#" id="alertsDropdown" data-bs-toggle="dropdown">
+                                    <div class="position-relative">
+                                        <i class="align-middle" data-feather="bell"></i>
+                                        <span class="indicator">4</span>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end py-0" aria-labelledby="alertsDropdown">
+                                    <div class="dropdown-menu-header">
+                                        4 New Notifications
+                                    </div>
+                                    <div class="list-group">
+                                        <a href="#" class="list-group-item">
+                                            <div class="row g-0 align-items-center">
+                                                <div class="col-2">
+                                                    <i class="text-danger" data-feather="alert-circle"></i>
+                                                </div>
+                                                <div class="col-10">
+                                                    <div class="text-dark">Update completed</div>
+                                                    <div class="text-muted small mt-1">Restart server 12 to complete the update.</div>
+                                                    <div class="text-muted small mt-1">30m ago</div>
+                                                </div>
+                                            </div>
+                                        </a> 
+                                    </div>
+                                    <div class="dropdown-menu-footer">
+                                        <a href="#" class="text-muted">Show all notifications</a>
+                                    </div>
+                                </div>
+                            </li> 
+                            <li class="nav-item dropdown">
+                                <a class="nav-icon dropdown-toggle d-inline-block d-sm-none" href="#" data-bs-toggle="dropdown">
+                                <i class="align-middle" data-feather="settings"></i>
+                                </a>
+                                <a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                                <img src="img/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> <span class="text-dark">administrator</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="user"></i> โปรไฟล์</a>  
+                                    <a class="dropdown-item" href="#"><i class="align-middle me-1" data-feather="settings"></i> ตั้งค่า</a> 
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="login.html">ออกจากระบบ</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <main class="content">
+                    <div class="container-fluid p-0">
+                        <div class="row">
+                            <div class="col-lg-6 col-12">
+                                <h3>E-Book</h3> 
+                            </div>
+                            <div class="col-lg-6 col-12 text-end">
+                                <a href="project-add.html" class="btn btn-success"><i class="fal fa-plus"></i> เพิ่ม E-Book</a>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            
+                            <div class="card p-3">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-6 col-12 mb-3"> 
+                                            <select class="js-example-basic-multiple w-100"> 
+                                                <option value="0" disabled selected>-- ชื่อ E-Book --</option>
+                                                <option value="1">E-Book</option> 
+                                                <option value="2">E-Book</option> 
+                                                <option value="3">E-Book</option>  
+                                                <option value="3">E-Book</option>  
+                                            </select>
+                                        </div> 
+                                        <div class="col-lg-3 col-md-6 col-12 mb-3"> 
+                                            <select class="js-example-basic-multiple w-100"> 
+                                                <option value="0" disabled selected>-- เจ้าของโครงการ --</option>
+                                                <option value="1">เจ้าของโครงการ</option> 
+                                                <option value="2">เจ้าของโครงการ</option> 
+                                                <option value="3">เจ้าของโครงการ</option>  
+                                                <option value="3">เจ้าของโครงการ</option>  
+                                            </select>
+                                        </div>  
+                                         
+                                        <hr>
+                                        <div class="col-12 text-center">
+                                            <button class="btn btn-primary"><i class="fal fa-search"></i> บันทึก</button>
+                                            <button class="btn btn btn-secondary">  ยกเลิก</button> 
+                                        </div>
+                                    </div> 
+                                </form>
+                            </div>
+                            <div class="card p-3">
+                                <div class="table-responsive">
+                                
+                                    <table class="table table-borderless table-striped tb-num" style="vertical-align: middle;">
+                                        <thead>
+                                            <tr class="sortx">
+                                                <th class="text-center">#</th>  
+                                                <th class="text-start" style="width: 400px;">ชื่อโครงการ</th>
+                                                <th class="text-center">เจ้าของโครงการ</th>
+                                                <th class="text-center">มูลค่าโครงการ</th>
+                                                <th class="text-center">ระยะเวลาโครงการ</th>  
+                                                <th class="text-center">
+                                                    การใช้งาน
+                                                </th>
+                                                <th class="text-center">&nbsp;</th> 
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">1</td> 
+                                                <td class="text-start">โครงการจ้างที่ปรึกษาเพื่อจัดทำฐานข้อมูลที่ดินและสิ่งปลูกสร้างในระบบสารสนเทศ เพื่อการบริหารทรัพย์สินของการรถไฟแห่งประเทศไทย</td>  
+                                                <td class="text-center">การรถไฟแห่งประเทศไทย</td>  
+                                                <td class="text-center">314 ล้านบาท</td>  
+                                                <td class="text-center">720 วัน</td>   
+                                                <td class="text-center">
+                                                    <div class="d-flex justify-content-center">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox" id="flexSwitch1" checked>
+                                                            <label class="form-check-label" for="flexSwitch1">การใช้งาน</label>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a href="project-edit.html" class="btn btn-danger btn-sm"><i class="fas fa-edit"></i></a>  
+                                                </td>  
+                                            </tr>   
+                                            <tr>
+                                                <td class="text-center">1</td> 
+                                                <td class="text-start">โครงการพัฒนาเรียนโค้ดดิ้งพัฒนาคุณภาพชีวิต (Coding)</td>  
+                                                <td class="text-center">สำนักงานส่งเสริมเศรษฐกิจดิจิทัล</td>  
+                                                <td class="text-center">304.73 ล้านบาท</td>  
+                                                <td class="text-center">365 วัน</td>   
+                                                <td class="text-center">
+                                                    <div class="d-flex justify-content-center">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox" id="flexSwitch1" checked>
+                                                            <label class="form-check-label" for="flexSwitch1">การใช้งาน</label>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a href="project-edit.html" class="btn btn-danger btn-sm"><i class="fas fa-edit"></i></a>  
+                                                </td>  
+                                            </tr>     
+                                            <tr>
+                                                <td class="text-center">1</td> 
+                                                <td class="text-start">โครงการงานจ้างเหมาพัฒนาระบบ Port Community System (PCS)</td>  
+                                                <td class="text-center">การท่าเรือแห่งประเทศไทย</td>  
+                                                <td class="text-center">440.0 ล้านบาท</td>  
+                                                <td class="text-center">1,095  วัน</td>   
+                                                <td class="text-center">
+                                                    <div class="d-flex justify-content-center">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox" id="flexSwitch1" checked>
+                                                            <label class="form-check-label" for="flexSwitch1">การใช้งาน</label>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a href="project-edit.html" class="btn btn-danger btn-sm"><i class="fas fa-edit"></i></a>  
+                                                </td>  
+                                            </tr>    
+                                            <tr>
+                                                <td class="text-center">1</td> 
+                                                <td class="text-start">โครงการจ้างที่ปรึกษาเพื่อจัดทำฐานข้อมูลที่ดินและสิ่งปลูกสร้างในระบบสารสนเทศ เพื่อการบริหารทรัพย์สินของการรถไฟแห่งประเทศไทย</td>  
+                                                <td class="text-center">การรถไฟแห่งประเทศไทย</td>  
+                                                <td class="text-center">314 ล้านบาท</td>  
+                                                <td class="text-center">720 วัน</td>   
+                                                <td class="text-center">
+                                                    <div class="d-flex justify-content-center">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox" id="flexSwitch1" checked>
+                                                            <label class="form-check-label" for="flexSwitch1">การใช้งาน</label>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a href="project-edit.html" class="btn btn-danger btn-sm"><i class="fas fa-edit"></i></a>  
+                                                </td>  
+                                            </tr>   
+                                            <tr>
+                                                <td class="text-center">1</td> 
+                                                <td class="text-start">โครงการพัฒนาเรียนโค้ดดิ้งพัฒนาคุณภาพชีวิต (Coding)</td>  
+                                                <td class="text-center">สำนักงานส่งเสริมเศรษฐกิจดิจิทัล</td>  
+                                                <td class="text-center">304.73 ล้านบาท</td>  
+                                                <td class="text-center">365 วัน</td>   
+                                                <td class="text-center">
+                                                    <div class="d-flex justify-content-center">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox" id="flexSwitch1" checked>
+                                                            <label class="form-check-label" for="flexSwitch1">การใช้งาน</label>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a href="project-edit.html" class="btn btn-danger btn-sm"><i class="fas fa-edit"></i></a>  
+                                                </td>  
+                                            </tr>     
+                                            <tr>
+                                                <td class="text-center">1</td> 
+                                                <td class="text-start">โครงการงานจ้างเหมาพัฒนาระบบ Port Community System (PCS)</td>  
+                                                <td class="text-center">การท่าเรือแห่งประเทศไทย</td>  
+                                                <td class="text-center">440.0 ล้านบาท</td>  
+                                                <td class="text-center">1,095  วัน</td>   
+                                                <td class="text-center">
+                                                    <div class="d-flex justify-content-center">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox" id="flexSwitch1" checked>
+                                                            <label class="form-check-label" for="flexSwitch1">การใช้งาน</label>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a href="project-edit.html" class="btn btn-danger btn-sm"><i class="fas fa-edit"></i></a>  
+                                                </td>  
+                                            </tr>    
+                                            <tr>
+                                                <td class="text-center">1</td> 
+                                                <td class="text-start">โครงการจ้างที่ปรึกษาเพื่อจัดทำฐานข้อมูลที่ดินและสิ่งปลูกสร้างในระบบสารสนเทศ เพื่อการบริหารทรัพย์สินของการรถไฟแห่งประเทศไทย</td>  
+                                                <td class="text-center">การรถไฟแห่งประเทศไทย</td>  
+                                                <td class="text-center">314 ล้านบาท</td>  
+                                                <td class="text-center">720 วัน</td>   
+                                                <td class="text-center">
+                                                    <div class="d-flex justify-content-center">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox" id="flexSwitch1" checked>
+                                                            <label class="form-check-label" for="flexSwitch1">การใช้งาน</label>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a href="project-edit.html" class="btn btn-danger btn-sm"><i class="fas fa-edit"></i></a>  
+                                                </td>  
+                                            </tr>   
+                                            <tr>
+                                                <td class="text-center">1</td> 
+                                                <td class="text-start">โครงการพัฒนาเรียนโค้ดดิ้งพัฒนาคุณภาพชีวิต (Coding)</td>  
+                                                <td class="text-center">สำนักงานส่งเสริมเศรษฐกิจดิจิทัล</td>  
+                                                <td class="text-center">304.73 ล้านบาท</td>  
+                                                <td class="text-center">365 วัน</td>   
+                                                <td class="text-center">
+                                                    <div class="d-flex justify-content-center">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox" id="flexSwitch1" checked>
+                                                            <label class="form-check-label" for="flexSwitch1">การใช้งาน</label>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a href="project-edit.html" class="btn btn-danger btn-sm"><i class="fas fa-edit"></i></a>  
+                                                </td>  
+                                            </tr>     
+                                            <tr>
+                                                <td class="text-center">1</td> 
+                                                <td class="text-start">โครงการงานจ้างเหมาพัฒนาระบบ Port Community System (PCS)</td>  
+                                                <td class="text-center">การท่าเรือแห่งประเทศไทย</td>  
+                                                <td class="text-center">440.0 ล้านบาท</td>  
+                                                <td class="text-center">1,095  วัน</td>   
+                                                <td class="text-center">
+                                                    <div class="d-flex justify-content-center">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox" id="flexSwitch1" checked>
+                                                            <label class="form-check-label" for="flexSwitch1">การใช้งาน</label>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a href="project-edit.html" class="btn btn-danger btn-sm"><i class="fas fa-edit"></i></a>  
+                                                </td>  
+                                            </tr>    
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main> 
+            </div>
+        </div>
+
+        
+
+        <script src="js/jquery-3.5.1.min.js"></script>   
+        <script src="js/app.js"></script>  
+
+        <script src="js/jquery.dataTables.min.js"></script>
+        <script src="js/dataTables.bootstrap5.min.js"></script>
+        <script src="js/select2.min.js"></script>
+         
+        
+
+
+        <script>  
+            $(document).ready(function() {
+                $('.table-stripedx').DataTable( {
+                    "paging": true,
+                    "searching": false,
+                    "ordering": true,
+                    "info": true
+                }); 
+                $('.js-example-basic-multiple').select2();   
+                $('.item-sup').click(function () {
+                    $(this).toggleClass("show");    
+                });   
+            });  
+
+            $(".tb-num td:nth-child(1)").each(function(i,v) {$(v).text(i + 1);});
+        </script>
+ 
+
+        
+    </body>
+</html>
