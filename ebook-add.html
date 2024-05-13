@@ -19,6 +19,8 @@
         <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css"/>   
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>   
         <link href="css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="js/summernote/summernote-lite.css"> 
+        <link rel="stylesheet" href="css/form-editor-summernote.css">
     </head>
     <body>
         <div class="wrapper">
@@ -63,7 +65,7 @@
 								<i class="far fa-address-card"></i>
 								<span class="align-middle">ABOUT US</span>
                             </a>
-                        </li>   
+                        </li>    
                     </ul>  
                 </div>
             </nav>
@@ -126,70 +128,42 @@
                     <div class="container-fluid p-0">
                         <div class="row">
                             <div class="col-lg-6 col-12">
-                                <h3>E-Book</h3> 
-                            </div>
-                            <div class="col-lg-6 col-12 text-end">
-                                <a href="ebook-add.html" class="btn btn-success"><i class="fal fa-plus"></i> เพิ่ม E-Book</a>
-                            </div>
+                                <h3>เพิ่ม E-Book</h3> 
+                            </div> 
                         </div>
-                        <div class="col-12">
-                            
-                            <div class="card p-3">
-                                <form>
-                                    <div class="row">
-                                        <div class="col-lg-3 col-md-6 col-12 mb-3"> 
-                                            <select class="js-example-basic-multiple w-100"> 
-                                                <option value="0" disabled selected>-- ชื่อ E-Book --</option>
-                                                <option value="1">E-Book</option> 
-                                                <option value="2">E-Book</option> 
-                                                <option value="3">E-Book</option>  
-                                                <option value="3">E-Book</option>  
-                                            </select>
-                                        </div>  
-                                         
-                                        <hr>
-                                        <div class="col-12 text-center">
-                                            <button class="btn btn-primary"><i class="fal fa-search"></i> ค้นหา</button> 
-                                        </div>
+                        <div class="col-12">  
+                            <form class="form-x">  
+                                <br> 
+            
+                                <div class="form-group row">
+                                    <div class="col-lg-6">
+                                        <label for=""><span>*</span>ชื่อ E-Book</label> 
+                                        <input type="text" class="form-control">
                                     </div> 
-                                </form>
-                            </div>
-                            <div class="card p-3">
-                                <div class="table-responsive">
-                                
-                                    <table class="table table-borderless table-striped tb-num" style="vertical-align: middle;">
-                                        <thead>
-                                            <tr class="sortx">
-                                                <th class="text-center">#</th>  
-                                                <th class="text-start" style="width: 400px;">ชื่อ E-Book</th>
-                                                <th class="text-center">วันที่เพิ่ม</th> 
-                                                <th class="text-center">
-                                                    การใช้งาน
-                                                </th>
-                                                <th class="text-center">&nbsp;</th> 
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="text-center">1</td> 
-                                                <td class="text-start">ชื่อ E-Book </td>  
-                                                <td class="text-center">10/06/2567</td>   
-                                                <td class="text-center">
-                                                    <div class="d-flex justify-content-center">
-                                                        <div class="form-check form-switch">
-                                                            <input class="form-check-input" type="checkbox" id="flexSwitch1" checked>
-                                                            <label class="form-check-label" for="flexSwitch1">การใช้งาน</label>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                                <td class="text-center">
-                                                    <a href="project-edit.html" class="btn btn-danger btn-sm"><i class="fas fa-edit"></i></a>  
-                                                </td>  
-                                            </tr>    
-                                        </tbody>
-                                    </table>
+                                </div>    
+                                <div class="form-group row">  
+                                    <div class="col-lg-4">
+                                        <label for=""><span>*</span>แนบไฟล์</label> 
+                                        <div class="input-group mb-3">
+                                            <input type="file" class="form-control" id="inputGroupFile02">
+                                            <label class="input-group-text" for="inputGroupFile02">แนบไฟล์</label>
+                                        </div>
+                                    </div>   
+                                </div> 
+ 
+    
+        
+                                <hr>
+                                <br>
+                                <div class="row">
+                                    <div class="col-12 text-center"> 
+                                        <button type="button" class="btn btn-light">ยกเลิก</button>
+                                        <button type="button" class="btn btn-primary">บันทึก</button>
+                                    </div>
                                 </div>
-                            </div>
+                                <br>
+                                <br>
+                            </form> 
                         </div>
                     </div>
                 </main> 
@@ -204,25 +178,19 @@
         <script src="js/jquery.dataTables.min.js"></script>
         <script src="js/dataTables.bootstrap5.min.js"></script>
         <script src="js/select2.min.js"></script>
+        <script src="js/summernote/summernote-lite.min.js"></script>
+        <script src="js/summernote.js"></script>
          
         
 
 
         <script>  
-            $(document).ready(function() {
-                $('.table-stripedx').DataTable( {
-                    "paging": true,
-                    "searching": false,
-                    "ordering": true,
-                    "info": true
-                }); 
+            $(document).ready(function() { 
                 $('.js-example-basic-multiple').select2();   
                 $('.item-sup').click(function () {
                     $(this).toggleClass("show");    
                 });   
-            });  
-
-            $(".tb-num td:nth-child(1)").each(function(i,v) {$(v).text(i + 1);});
+            });   
         </script>
  
 
