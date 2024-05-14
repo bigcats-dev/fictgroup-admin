@@ -21,6 +21,7 @@
         <link href="css/select2.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="js/summernote/summernote-lite.css"> 
         <link rel="stylesheet" href="css/form-editor-summernote.css">
+        <link rel="stylesheet" href="css/image-uploader.min.css" />
     </head>
     <body>
         <div class="wrapper">
@@ -48,13 +49,13 @@
 								<span class="align-middle">OUR CLIENT</span>
                             </a>
                         </li>  
-                        <li class="sidebar-item">
+                        <li class="sidebar-item active">
                             <a class="sidebar-link" href="activity.html">  
 								<i class="fal fa-user"></i> 
 								<span class="align-middle">ACTIVITY CSR</span>
                             </a>
                         </li>  
-                        <li class="sidebar-item active">
+                        <li class="sidebar-item">
                             <a class="sidebar-link" href="knowledge.html">  
 								<i class="fab fa-leanpub"></i>
 								<span class="align-middle">KNOWLEDGE</span>
@@ -128,7 +129,7 @@
                     <div class="container-fluid p-0">
                         <div class="row">
                             <div class="col-lg-6 col-12">
-                                <h3>เพิ่ม KNOWLEDGE</h3> 
+                                <h3>เพิ่ม ACTIVITY</h3> 
                             </div> 
                         </div>
                         <div class="col-12">  
@@ -137,7 +138,7 @@
             
                                 <div class="form-group row">
                                     <div class="col-lg-6">
-                                        <label for=""><span>*</span>ชื่อ KNOWLEDGE</label> 
+                                        <label for=""><span>*</span>ชื่อ ACTIVITY</label> 
                                         <input type="text" class="form-control">
                                     </div> 
                                 </div>   
@@ -150,14 +151,25 @@
                                 </div>
 
                                 <div class="form-group row">  
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-12 position-relative">
                                         <label for=""><span>*</span>แนบรูป</label> 
-                                        <div class="input-group mb-3">
-                                            <input type="file" class="form-control" id="inputGroupFile02">
-                                            <label class="input-group-text" for="inputGroupFile02">แนบไฟล์</label>
+                                        <div class="input-field"> 
+                                            <div class="input-images-1"  ></div>
                                         </div>
                                     </div>   
                                 </div> 
+
+                                
+                                <div class="form-group row imgb" id="sortable">
+                                    <div class="col-lg-3 col-12 mb-3 position-relative">
+                                        <img src="img/pp1.jpg" alt="images" class="img-fluid m-auto d-block">
+                                        <i class="fal fa-times close-g"></i>
+                                    </div>   
+                                    <div class="col-lg-3 col-12 mb-3 position-relative">
+                                        <img src="img/pp2.jpg" alt="images" class="img-fluid m-auto d-block">
+                                        <i class="fal fa-times close-g"></i>
+                                    </div>   
+                                </div>  
  
     
         
@@ -188,6 +200,7 @@
         <script src="js/select2.min.js"></script>
         <script src="js/summernote/summernote-lite.min.js"></script>
         <script src="js/summernote.js"></script>
+        <script src="js/image-uploader.min.js"  ></script>  
          
         
 
@@ -199,6 +212,56 @@
                     $(this).toggleClass("show");    
                 });   
             });   
+
+            $(function () { 
+			$('.input-images-1').imageUploader();      
+ 
+
+                $('form').on('submit', function (event) { 
+                    event.preventDefault();
+                    event.stopPropagation(); 
+                    let $form = $(this),
+                        $modal = $('.modal'); 
+                    $modal.find('#display-name span').text($form.find('input[id^="name"]').val());
+                    $modal.find('#display-description span').text($form.find('input[id^="description"]').val());
+    
+                    let $inputImages = $form.find('input[name^="images"]');
+                    if (!$inputImages.length) {
+                        $inputImages = $form.find('input[name^="photos"]')
+                    }
+    
+                    let $fileNames = $('<ul>');
+                    for (let file of $inputImages.prop('files')) {
+                        $('<li>', {text: file.name}).appendTo($fileNames);
+                    }
+    
+                    $modal.find('#display-new-images').html($fileNames.html());
+    
+                    let $inputPreloaded = $form.find('input[name^="old"]');
+                    if ($inputPreloaded.length) {
+    
+                        let $preloadedIds = $('<ul>');
+                        for (let iP of $inputPreloaded) {
+                            $('<li>', {text: '#' + iP.value}).appendTo($preloadedIds);
+                        }
+    
+                        $modal.find('#display-preloaded-images').show().html($preloadedIds.html());
+
+                    } else { 
+                        $modal.find('#display-preloaded-images').hide(); 
+                    } 
+                    $modal.css('visibility', 'visible');
+                });
+    
+                $('input').on('focus', function () {
+                    $(this).parent().find('label').addClass('active')
+                }).on('blur', function () {
+                    if ($(this).val() == '') {
+                        $(this).parent().find('label').removeClass('active');
+                    }
+                }); 
+            }); 
+
         </script>
  
 
