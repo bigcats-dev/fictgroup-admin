@@ -389,6 +389,70 @@ body{
   height: 200px;
   object-fit: cover;
 }
+.box-acti{
+  position: relative;
+  margin-bottom: 20px;
+}
+.box-acti img{
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+.box-acti .textx{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  background-color: rgba(34, 69, 152, 0.8);
+  height: 56px;
+  padding: 8px;
+  color: #fff;
+ 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+          line-clamp: 2;
+  -webkit-box-orient: vertical;
+} 
+.knowledge-box{
+  border: 1px solid #dedede;
+  position: relative;
+  margin-bottom: 20px;
+}
+.knowledge-box img{
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+.knowledge-box .dex{
+  padding: 10px;
+}
+.knowledge-box h3{
+  color: var(--accent-color-1);
+  margin-top: 10px;
+  margin-bottom: 10px; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+          line-clamp: 2;
+  -webkit-box-orient: vertical;
+} 
+.knowledge-box p{
+  color: #000;
+  margin-top: 10px;
+  margin-bottom: 10px; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+          line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+
+
 
 /*
 transition: .33s all ease-out;  
