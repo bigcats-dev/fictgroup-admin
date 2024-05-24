@@ -450,8 +450,67 @@ body{
           line-clamp: 2;
   -webkit-box-orient: vertical;
 } 
-
-
+.modal-job .modal-content{
+  border-radius: 0px;
+}
+.modal-job .modal-content hr{
+  border-bottom: 3px solid #224598;
+  opacity: 1;
+}
+.modal-job .top-b{ 
+  background-color: #224598;
+  color: white;
+}
+.modal-job .footer {
+  position: relative;
+  background-color: #224598;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+.modal-job .footer::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #224598;
+  border-radius: 50% 50% 0 0;
+  z-index: 1;
+} 
+.modal-job label{
+  font-size: 16px;
+} 
+.img-pf{
+  border-radius: 4px;
+  object-fit: cover;
+  border: 1px solid #224598;
+  width: 90px;
+  height: 120px;
+}
+.rowx-file p{
+  height: 20px;
+  font-size: 13px;
+}
+.rowx-file img{
+  border-radius: 4px;
+  object-fit: cover;
+  border: 3px solid #224598;
+  width: 100%;
+  height: 100px; 
+}
+.rowx-file a{ 
+  transition: .33s all ease-out;  
+  position: relative;
+  z-index: 2;
+}
+.rowx-file a:hover{ 
+  transition: .33s all ease-out;  
+  opacity: .76;
+}
 
 /*
 transition: .33s all ease-out;  
